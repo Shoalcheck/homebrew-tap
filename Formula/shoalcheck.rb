@@ -5,20 +5,20 @@
 class Shoalcheck < Formula
   desc "Read-only Kubernetes preflight and audit: which change stops, and the why"
   homepage "https://github.com/shoalcheck/shoalcheck"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.2/shoalcheck_0.1.2_darwin_amd64.tar.gz"
-      sha256 "2aaf679783b797e53cd8ad6738d9ffea2a0fb06a1857301afee573b13bc7865e"
+      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.3/shoalcheck_0.1.3_darwin_amd64.tar.gz"
+      sha256 "761ca7a638a40944488eb1345e7ce8d2450b09ed97712ee3faa17d04810fa839"
 
       define_method(:install) do
         bin.install "shoalcheck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.2/shoalcheck_0.1.2_darwin_arm64.tar.gz"
-      sha256 "3c4b50e26df2c0a158cc4cc3dd3e78d03ea4b98593db2bca2626a93f33cb05f5"
+      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.3/shoalcheck_0.1.3_darwin_arm64.tar.gz"
+      sha256 "6706af0b5b32f052fbfefcb0c7d80fe6f8abee1fd50f0c2f32eed415cb72214d"
 
       define_method(:install) do
         bin.install "shoalcheck"
@@ -28,15 +28,15 @@ class Shoalcheck < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.2/shoalcheck_0.1.2_linux_amd64.tar.gz"
-      sha256 "08fea5e739dafba0336b24b8f395e156140a855da52e5950c701a9a1609c887a"
+      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.3/shoalcheck_0.1.3_linux_amd64.tar.gz"
+      sha256 "b4d1ddefd3693652a413e6cbf1f9b5633f9509e9a08a21bfb4f50333d2bb54f3"
       define_method(:install) do
         bin.install "shoalcheck"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.2/shoalcheck_0.1.2_linux_arm64.tar.gz"
-      sha256 "961e92056514bea2e81cf1b4ffe21538718f33de1eebbc1e4554df2c839a0bfd"
+      url "https://github.com/shoalcheck/shoalcheck/releases/download/v0.1.3/shoalcheck_0.1.3_linux_arm64.tar.gz"
+      sha256 "3a4b567a0b226953db6fa649acd4bac38373ba04b184d5c50d3b7d2e1d14b444"
       define_method(:install) do
         bin.install "shoalcheck"
       end
